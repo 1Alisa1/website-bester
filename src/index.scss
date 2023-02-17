@@ -1,0 +1,10 @@
+@use '../src/scss/base/reset.scss';
+@use '../src/scss/base/fonts.scss';
+
+html {
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
