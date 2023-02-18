@@ -1,5 +1,4 @@
-@use '../src/scss/base/reset.scss';
-@use '../src/scss/base/fonts.scss';
+@use '../abstracts/mixins';
 
 html {
   box-sizing: border-box;
@@ -7,4 +6,8 @@ html {
 
 *, *::before, *::after {
   box-sizing: inherit;
+}
+
+body {
+  @include mixins.font-Roboto-400;
 }
