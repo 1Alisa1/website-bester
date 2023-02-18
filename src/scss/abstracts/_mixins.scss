@@ -15,3 +15,38 @@
   font-style: normal;
   font-weight: 900;
 }
+
+@mixin wrapper ($padding) {
+  padding: 0 $padding;
+  margin: 0 auto;
+}
+
+@mixin desktop {
+  @media screen and (min-width: 1920px){
+    @content;
+  }
+}
+
+@mixin laptop {
+  @media screen and (min-width: 1366px) and (max-width: 1919px){
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media screen and (min-width: 768px) and (max-width: 1365px){
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media screen and (min-width: 360px) and (max-width: 767px){
+    @content;
+  }
+}
+
+@mixin flex-space-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
