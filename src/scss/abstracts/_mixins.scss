@@ -21,25 +21,19 @@
   margin: 0 auto;
 }
 
-@mixin desktop {
-  @media screen and (min-width: 1920px){
+@mixin large {
+  @media screen and (min-width: 1367px){
     @content;
   }
 }
 
-@mixin laptop {
-  @media screen and (min-width: 1366px) and (max-width: 1919px){
+@mixin medium {
+  @media screen and (min-width: 768px) and (max-width: 1366px){
     @content;
   }
 }
 
-@mixin tablet {
-  @media screen and (min-width: 768px) and (max-width: 1365px){
-    @content;
-  }
-}
-
-@mixin mobile {
+@mixin small {
   @media screen and (min-width: 360px) and (max-width: 767px){
     @content;
   }
