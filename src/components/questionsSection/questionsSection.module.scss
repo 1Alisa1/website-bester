@@ -1,0 +1,33 @@
+@use '/src/scss/abstracts/mixins' as *;
+section {
+  margin-bottom: 170px;
+  @include medium {
+    margin-bottom: 130px;
+  }
+  @include small {
+    margin-bottom: 90px;
+  }
+  h2 {
+    margin-bottom: 70px;
+    font-size: 64px;
+    @include medium {
+      margin-bottom: 40px;
+      font-size: 48px;
+    }
+    @include small {
+      margin-bottom: 10px;
+      font-size: 32px;
+    }
+  }
+  .questionsContainer {
+    display: grid;
+    grid-template-columns: repeat(2, 45%);
+    gap: 10%;
+    @include medium {
+      display: block;
+    }
+    @include small {
+      display: block;
+    }
+  }
+}

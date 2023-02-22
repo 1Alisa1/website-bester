@@ -66,6 +66,18 @@ header {
   }
 }
 
+main {
+  @include large {
+    @include wrapper(map-get($wrapper, 'large'));
+  }
+  @include medium {
+    @include wrapper(map-get($wrapper, 'medium'));
+  }
+  @include small {
+    @include wrapper(map-get($wrapper, 'small'));
+  }
+}
+
 footer {
   @include large {
     @include wrapper(map-get($wrapper, 'large'));
