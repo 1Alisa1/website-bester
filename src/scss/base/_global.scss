@@ -10,8 +10,8 @@ html {
 }
 
 body {
-  @include mixins.font-Roboto-400;
   height: 100%;
+  @include mixins.font-Roboto-400;
 }
 
 #root {

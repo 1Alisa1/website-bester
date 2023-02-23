@@ -4,6 +4,12 @@
   font-weight: 400;
 }
 
+@mixin font-Roboto-500 {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+}
+
 @mixin font-Roboto-700 {
   font-family: 'Roboto';
   font-style: normal;
@@ -16,18 +22,26 @@
   font-weight: 900;
 }
 
-@mixin wrapper ($padding) {
+@mixin wrapper-small ($padding) {
   padding: 0 $padding;
 }
 
+@mixin wrapper ($width) {
+  width: $width;
+  max-width: $width;
+  margin: 0 auto;
+  //padding: 0 $padding;
+  //margin: 0 auto;
+}
+
 @mixin large {
-  @media screen and (min-width: 1367px){
+  @media screen and (min-width: 1920px){
     @content;
   }
 }
 
 @mixin medium {
-  @media screen and (min-width: 768px) and (max-width: 1366px){
+  @media screen and (min-width: 1366px) and (max-width: 1919px){
     @content;
   }
 }
@@ -39,7 +53,7 @@
 }
 
 @mixin small {
-  @media screen and (min-width: 360px) and (max-width: 767px){
+  @media screen and (min-width: 360px) and (max-width: 1365px){
     @content;
   }
 }

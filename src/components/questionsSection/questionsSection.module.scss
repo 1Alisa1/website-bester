@@ -9,14 +9,14 @@ section {
   }
   h2 {
     margin-bottom: 70px;
-    font-size: 64px;
+    font-size: 4rem;
     @include medium {
       margin-bottom: 40px;
-      font-size: 48px;
+      font-size: 3rem;
     }
     @include small {
       margin-bottom: 10px;
-      font-size: 32px;
+      font-size: 2rem;
     }
   }
   .questionsContainer {
