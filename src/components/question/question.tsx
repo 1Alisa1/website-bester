@@ -4,7 +4,7 @@ import { useState } from 'react';
 interface QuestionProps {
   question: string;
   answer: string;
-  isAlwaysOpen: boolean;
+  isAlwaysOpen?: boolean;
 }
 
 const Question: React.FC<QuestionProps> = ({ question, answer, isAlwaysOpen }) => {
@@ -12,7 +12,7 @@ const Question: React.FC<QuestionProps> = ({ question, answer, isAlwaysOpen }) =
 
   const handleClick = () => {
     if (isAlwaysOpen) {
-      setShowAnswer(true);
+      return;
     } else {
       setShowAnswer(!showAnswer);
     }

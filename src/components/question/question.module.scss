@@ -31,7 +31,6 @@
         transition: transform 0.2s linear;
         &.open {
           transform: rotate(45deg);
-          //transition: transform 0.2s linear;
         }
       }
     }
@@ -67,9 +66,7 @@
     &.show {
       opacity: 1;
       @include medium {
-        //transition: opacity 0.3s linear;
         max-height: 10000px;
-        //height: fit-content;
       }
       @include small {
         max-height: 10000px;
