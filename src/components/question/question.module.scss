@@ -7,17 +7,25 @@
       @include flex-space-between;
       align-items: flex-end;
       margin-bottom: 18px;
+      @include medium {
+        margin-bottom: 18px;
+      }
+      @include small {
+        margin-bottom: 10px;
+      }
       p {
         @include font-Roboto-700;
-        font-size: 24px;
+        font-size: 1.5rem;
         margin-top: 30px;
         @include medium {
           margin-top: 30px;
-          font-size: 22px;
+          font-size: 1.375rem;
         }
         @include small {
+          width: 80%;
           margin-top: 30px;
-          font-size: 16px;
+          @include font-Roboto-500;
+          font-size: 1rem;
         }
       }
       .button {
@@ -29,6 +37,10 @@
         background-repeat: round;
         transform: rotate(0deg);
         transition: transform 0.2s linear;
+        @include small {
+          width: 20px;
+          height: 20px;
+        }
         &.open {
           transform: rotate(45deg);
         }
@@ -45,9 +57,9 @@
       }
     }
   }
-
   .answer {
     display: flex;
+    width: 80%;
     height: 100px;
     opacity: 0;
     transition: opacity 0.2s linear, max-height 0.2s linear;
@@ -73,15 +85,14 @@
       }
     }
     p {
-      font-size: 20px;
-
+      font-size: 1.25rem;
       @include medium {
         margin-bottom: 20px;
-        font-size: 18px;
+        font-size: 1.125rem;
       }
       @include small {
         margin-bottom: 10px;
-        font-size: 14px;
+        font-size: 0.875rem;
       }
     }
   }

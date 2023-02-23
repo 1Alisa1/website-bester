@@ -1,4 +1,10 @@
-$wrapper: (
+$width: (
+  'small': 360px,
+  'medium': 1326px,
+  'large': 1718px,
+);
+
+$padding: (
   'small': 3%,
   'medium': 1.5%,
   'large': 5%,

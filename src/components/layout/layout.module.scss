@@ -3,16 +3,19 @@
 
 header {
   @include large {
-    @include wrapper(map-get($wrapper, 'large'));
-    height: 156px;
+    @include wrapper(map-get($width, 'large'));
+    min-height: 156px;
+    margin-bottom: 50px;
   }
   @include medium {
-    @include wrapper(map-get($wrapper, 'medium'));
-    height: 140px;
+    @include wrapper(map-get($width, 'medium'));
+    min-height: 140px;
+    margin-bottom: 20px;
   }
   @include small {
-    @include wrapper(map-get($wrapper, 'small'));
-    height: 58px;
+    @include wrapper-small(map-get($padding, 'small'));
+    min-height: 58px;
+    margin-bottom: 50px;
   }
   @include flex-space-between;
   .headerLogo {
@@ -45,9 +48,9 @@ header {
         a {
           text-decoration: none;
           color: black;
-          font-size: 24px;
+          font-size: 1.5rem;
           @include medium {
-            font-size: 20px;
+            font-size: 1.25rem;
           }
         }
       }
@@ -68,124 +71,128 @@ header {
 
 main {
   @include large {
-    @include wrapper(map-get($wrapper, 'large'));
+    @include wrapper(map-get($width, 'large'));
   }
   @include medium {
-    @include wrapper(map-get($wrapper, 'medium'));
+    @include wrapper(map-get($width, 'medium'));
   }
   @include small {
-    @include wrapper(map-get($wrapper, 'small'));
+    @include wrapper-small(map-get($padding, 'small'));
   }
 }
 
 footer {
-  @include large {
-    @include wrapper(map-get($wrapper, 'large'));
-  }
-  @include medium {
-    @include wrapper(map-get($wrapper, 'medium'));
-  }
-  @include x-medium {
-    height: 340px;
-    font-size: 18px;
-  }
-  @include small {
-    @include wrapper(map-get($wrapper, 'small'));
-    height: 400px;
-    flex-wrap: wrap;
-    font-size: 14px;
-    br {
-      display: none;
-    }
-  }
   display: flex;
-  justify-content: space-around;
-  align-items: center;
   flex: 0 0 auto;
-  height: 430px;
-  background-image: linear-gradient(270deg, #a798fe 0%, #ffde6e 100%);
-  font-size: 20px;
-  line-height: 1.1;
-  .footerLogo {
-    width: 258px;
-    height: 293px;
-    @include x-medium {
-      width: 176px;
-      height: 199px;
+  width: 100%;
+  background: linear-gradient(to right, #ffde6e 0%, #ffde6e 50%, #a798fe 50%, #a798fe 100%);
+  @include small {
+    justify-content: center;
+  }
+  .content {
+    @include large {
+      @include wrapper(map-get($width, 'large'));
+    }
+    @include medium {
+      @include wrapper(map-get($width, 'medium'));
     }
     @include small {
-      width: 133px;
-      height: 151px;
-      margin-top: 20px;
+      @include wrapper-small(map-get($padding, 'small'));
+      height: 400px;
+      flex-wrap: wrap;
+      font-size: 0.875rem;
+      br {
+        display: none;
+      }
     }
-    img {
-      width: 100%;
-      height: 100%;
-    }
-  }
-  .footerInfo {
     display: flex;
-    flex-direction: column;
-    @include small {
-      align-items: center;
-      width: 75%;
-      order: 1;
-      text-align: center;
-    }
-    .firstBlock {
-      margin-bottom: 88px;
+    justify-content: space-around;
+    align-items: center;
+    height: 430px;
+    background-image: linear-gradient(270deg, #a798fe 0%, #ffde6e 100%);
+    font-size: 1.25rem;
+    line-height: 1.1;
+    .footerLogo {
+      width: 246px;
+      height: 280px;
+      @include medium {
+        width: 237px;
+        height: 270px;
+      }
       @include small {
-        margin-top: 50px;
-        margin-bottom: 28px;
+        width: 133px;
+        height: 151px;
+        margin-top: 20px;
       }
-      .individual {
-        margin-bottom: 20px;
-        @include small {
-          margin-bottom: 28px;
-        }
-      }
-    }
-    .secondBlock {
-      @include small {
-        margin-bottom: 19px;
-      }
-      .accountNumber {
-        margin-bottom: 20px;
-        @include small {
-          margin-bottom: 6px;
-        }
+      img {
+        width: 100%;
+        height: 100%;
       }
     }
-  }
-  .footerContacts {
-    @include small {
+    .footerInfo {
       display: flex;
       flex-direction: column;
-      justify-content: flex-end;
-    }
-    .mode {
-      margin-bottom: 47px;
       @include small {
-        margin-bottom: 16px;
-        line-height: 1.5;
-        br {
-          display: inline;
+        align-items: center;
+        width: 75%;
+        order: 1;
+        text-align: center;
+      }
+      .firstBlock {
+        margin-bottom: 88px;
+        @include small {
+          margin-top: 50px;
+          margin-bottom: 28px;
+        }
+        .individual {
+          margin-bottom: 20px;
+          @include small {
+            margin-bottom: 28px;
+          }
+        }
+      }
+      .secondBlock {
+        @include small {
+          margin-bottom: 19px;
+        }
+        .accountNumber {
+          margin-bottom: 20px;
+          @include small {
+            margin-bottom: 6px;
+          }
         }
       }
     }
-    .email {
-      margin-bottom: 20px;
+    .footerContacts {
       @include small {
-        margin-top: 12px;
-        margin-bottom: 6px;
-        order: -1;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
       }
-    }
-    .phoneNumber {
-      margin-bottom: 46px;
-      @include small {
-        margin-bottom: 15px;
-        order: -1;
+      .mode {
+        margin-bottom: 47px;
+        @include small {
+          margin-bottom: 16px;
+          line-height: 1.5;
+          br {
+            display: inline;
+          }
+        }
+      }
+      .email {
+        margin-bottom: 20px;
+        @include small {
+          margin-top: 12px;
+          margin-bottom: 6px;
+          order: -1;
+        }
+      }
+      .phoneNumber {
+        margin-bottom: 46px;
+        @include small {
+          margin-bottom: 15px;
+          order: -1;
+        }
       }
     }
   }
@@ -195,11 +202,6 @@ footer {
   width: 60px;
   height: 60px;
   border-radius: 12px;
-  @include x-medium {
-    width: 50px;
-    height: 50px;
-    border-radius: 10px;
-  }
   @include small {
     width: 40px;
     height: 40px;
