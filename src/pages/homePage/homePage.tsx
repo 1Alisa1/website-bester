@@ -1,5 +1,11 @@
+import QuestionsSection from '../../components/questionsSection/questionsSection';
+
 const HomePage: React.FC = () => {
-  return <div></div>;
+  return (
+    <>
+      <QuestionsSection />
+    </>
+  );
 };
 
 export { HomePage };

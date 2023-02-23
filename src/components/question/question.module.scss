@@ -1,0 +1,88 @@
+@use '/src/scss/abstracts/mixins' as *;
+
+.container {
+  height: fit-content;
+  .question {
+    div {
+      @include flex-space-between;
+      align-items: flex-end;
+      margin-bottom: 18px;
+      p {
+        @include font-Roboto-700;
+        font-size: 24px;
+        margin-top: 30px;
+        @include medium {
+          margin-top: 30px;
+          font-size: 22px;
+        }
+        @include small {
+          margin-top: 30px;
+          font-size: 16px;
+        }
+      }
+      .button {
+        width: 22px;
+        height: 22px;
+        border: none;
+        background-color: transparent;
+        background-image: url('../../img/plus.svg');
+        background-repeat: round;
+        transform: rotate(0deg);
+        transition: transform 0.2s linear;
+        &.open {
+          transform: rotate(45deg);
+        }
+      }
+    }
+    .border {
+      margin-bottom: 30px;
+      border: 1px solid #c4c4c4;
+      @include medium {
+        margin-bottom: 20px;
+      }
+      @include small {
+        margin-bottom: 10px;
+      }
+    }
+  }
+
+  .answer {
+    display: flex;
+    height: 100px;
+    opacity: 0;
+    transition: opacity 0.2s linear, max-height 0.2s linear;
+    @include medium {
+      width: 60%;
+      height: auto;
+      max-height: 0;
+      transform-origin: top;
+    }
+    @include small {
+      width: 95%;
+      height: auto;
+      max-height: 0;
+      transform-origin: top;
+    }
+    &.show {
+      opacity: 1;
+      @include medium {
+        max-height: 10000px;
+      }
+      @include small {
+        max-height: 10000px;
+      }
+    }
+    p {
+      font-size: 20px;
+
+      @include medium {
+        margin-bottom: 20px;
+        font-size: 18px;
+      }
+      @include small {
+        margin-bottom: 10px;
+        font-size: 14px;
+      }
+    }
+  }
+}
