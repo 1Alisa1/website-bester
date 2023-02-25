@@ -1,0 +1,68 @@
+@use '/src/scss/abstracts/mixins' as *;
+@use '/src/scss/abstracts/variables' as *;
+
+.benefits {
+  @include large {
+    @include wrapper(map-get($width, 'large'));
+    margin-bottom: 136px;
+  }
+  @include medium {
+    @include wrapper(map-get($width, 'medium'));
+    margin-bottom: 35px;
+  }
+  @include small {
+    margin-bottom: 100px;
+  }
+  .benefitsTitle {
+    margin-bottom: 100px;
+    font-size: 4rem;
+    @include medium {
+      margin-bottom: 70px;
+      font-size: 3rem;
+    }
+    @include small {
+      @include wrapper-small(map-get($padding, 'small'));
+      margin-bottom: 40px;
+      font-size: 2rem;
+    }
+  }
+  .benefitsContainer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 64px;
+    .medium {
+      display: none;
+    }
+    .small {
+      display: none;
+    }
+    @include medium {
+      gap: 45px;
+      .large {
+        display: none;
+      }
+      .medium {
+        display: block;
+      }
+    }
+    @include small {
+      display: none;
+    }
+  }
+  .benefitsContainerMobile {
+    display: none;
+    @include small {
+      display: block;
+      margin-bottom: 100px;
+      .large {
+        display: none;
+      }
+      .medium {
+        display: none;
+      }
+      .small {
+        display: block;
+      }
+    }
+  }
+}
