@@ -1,0 +1,115 @@
+@use '/src/scss/abstracts/mixins' as *;
+@use '/src/scss/abstracts/variables' as *;
+
+.services {
+  width: 100%;
+  margin-bottom: 120px;
+  background: linear-gradient(
+    to right,
+    #ffde6e 0%,
+    #ffde6e 50%,
+    #a798fe 50%,
+    #a798fe 100%
+  );
+  @include medium {
+    margin-bottom: 60px;
+  }
+  @include small {
+    margin-bottom: 24px;
+  }
+  .content {
+    background-image: linear-gradient(270deg, #a798fe 0%, #ffde6e 100%);
+    @include large {
+      @include wrapper(map-get($width, 'large'));
+    }
+    @include medium {
+      @include wrapper(map-get($width, 'medium'));
+    }
+    @include small {
+      @include wrapper-small(map-get($padding, 'small'));
+      max-width: 390px;
+      margin: 0 auto;
+    }
+    .title {
+      margin-bottom: 100px;
+      padding-top: 120px;
+      font-size: 64px;
+      line-height: 1.2;
+      @include medium {
+        margin-bottom: 70px;
+        padding-top: 60px;
+        font-size: 48px;
+      }
+      @include small {
+        margin-bottom: 40px;
+        padding-top: 32px;
+        font-size: 32px;
+      }
+    }
+    .cardContainer {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      gap: 77px;
+      padding-bottom: 180px;
+      @include medium {
+        gap: 60px;
+        padding-bottom: 93px;
+      }
+      @include small {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        padding-bottom: 50px;
+      }
+      .wrapper {
+        display: flex;
+        margin-bottom: 28px;
+        gap: 20px;
+        line-height: 1.15;
+        .medium {
+          display: none;
+        }
+        @include medium {
+          gap: 10px;
+          .small {
+            display: none;
+          }
+          .medium {
+            display: block;
+          }
+        }
+        @include small {
+          gap: 5px;
+          margin-bottom: 20px;
+          br {
+            display: none;
+          }
+          .small {
+            display: block;
+          }
+          .medium {
+            display: none;
+          }
+        }
+        .img {
+          background: url('../../img/check.svg') no-repeat;
+          background-size: contain;
+          min-width: 24px;
+          height: 16px;
+          margin-top: 1px;
+          @include medium {
+            min-width: 23px;
+            height: 15px;
+            margin-top: 2px;
+          }
+          @include small {
+            min-width: 16px;
+            height: 9px;
+            margin-top: 1px;
+          }
+        }
+      }
+    }
+  }
+}

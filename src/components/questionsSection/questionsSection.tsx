@@ -3,7 +3,7 @@ import styles from './questionsSection.module.scss';
 
 const QuestionsSection = () => {
   return (
-    <section>
+    <section className={styles.questionsSection}>
       <h2>Ваши вопросы</h2>
       <div className={styles.questionsContainer}>
         <Question
