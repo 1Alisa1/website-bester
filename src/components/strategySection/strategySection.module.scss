@@ -1,12 +1,18 @@
 @use '/src/scss/abstracts/mixins' as *;
+@use '/src/scss/abstracts/variables' as *;
 
 .strategy {
-  margin-bottom: 200px;
+  @include large {
+    @include wrapper(map-get($width, 'large'));
+     margin-bottom: 200px;
+  }
   @include medium {
-    margin-bottom: 80px;
+    @include wrapper(map-get($width, 'medium'));
+     margin-bottom: 80px;
   }
   @include small {
-    margin-bottom: 70px;
+    @include wrapper-small(map-get($padding, 'small'));
+     margin-bottom: 70px;
   }
   .description {
     width: 70%;

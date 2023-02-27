@@ -1,13 +1,19 @@
 @use '/src/scss/abstracts/mixins' as *;
+@use '/src/scss/abstracts/variables' as *;
 
 .intro {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 200px;
+  @include large {
+    @include wrapper(map-get($width, 'large'));
+    margin-bottom: 200px;
+  }
   @include medium {
+    @include wrapper(map-get($width, 'medium'));
     margin-bottom: 150px;
   }
   @include small {
+    @include wrapper-small(map-get($padding, 'small'));
     justify-content: center;
     margin-bottom: 100px;
   }
@@ -99,13 +105,10 @@
     }
   }
   .image {
-    position: relative;
-    left: 30px;
-    width: 903px;
+    width: 867px;
     height: 676px;
     @include medium {
-      left: 25px;
-      width: 673px;
+      width: 645px;
       height: 504px;
     }
     @include small {

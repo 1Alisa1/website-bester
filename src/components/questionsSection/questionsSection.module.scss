@@ -1,10 +1,17 @@
 @use '/src/scss/abstracts/mixins' as *;
-section {
-  margin-bottom: 170px;
+@use '/src/scss/abstracts/variables' as *;
+
+.questionsSection {
+  @include large {
+    @include wrapper(map-get($width, 'large'));
+    margin-bottom: 170px;
+  }
   @include medium {
+    @include wrapper(map-get($width, 'medium'));
     margin-bottom: 130px;
   }
   @include small {
+    @include wrapper-small(map-get($padding, 'small'));
     margin-bottom: 90px;
   }
   h2 {

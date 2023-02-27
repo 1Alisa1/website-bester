@@ -1,0 +1,77 @@
+@use '/src/scss/abstracts/mixins' as *;
+
+.card {
+  display: flex;
+  flex-direction: column;
+  flex: 1 0;
+  min-width: 522px;
+  height: 506px;
+  padding: 33px 46px 48px 46px;
+  border-radius: 10px;
+  background-color: white;
+  @include medium {
+    min-width: 402px;
+    height: 492px;
+    padding: 33px 30px 35px 30px;
+  }
+  @include small {
+    min-width: 340px;
+    max-width: 427px;
+    width: 100%;
+    height: 397px;
+    min-height: 397px;
+    padding: 20px 25px 27px 25px;
+  }
+  .title {
+    font-size: 36px;
+    margin-bottom: 50px;
+    text-align: center;
+    @include medium {
+      margin-bottom: 44px;
+      font-size: 32px;
+    }
+    @include small {
+      margin-bottom: 40px;
+      font-size: 20px;
+    }
+  }
+  .description {
+    width: 95%;
+    font-size: 20px;
+    @include medium {
+      width: 100%;
+      font-size: 18px;
+    }
+    @include small {
+      width: 272px;
+      font-size: 12px;
+    }
+  }
+  .button {
+    height: 55px;
+    margin-top: auto;
+    border: 2px solid #2b2a2a;
+    border-radius: 5px;
+    background-color: white;
+    font-size: 24px;
+    @include medium {
+      height: 55px;
+      font-size: 20px;
+    }
+    @include small {
+      height: 45px;
+      border: 1.5px solid #2b2a2a;
+      font-size: 16px;
+    }
+    &:hover {
+      color: #fdfcfc;
+      background-color: #2b2a2a;
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.16);
+    }
+    &:active {
+      color: #fdfcfc;
+      background-color: #1f1e1e;
+      box-shadow: inset 0px 4px 4px rgba(158, 158, 158, 0.16);
+    }
+  }
+}

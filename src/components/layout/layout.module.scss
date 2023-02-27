@@ -69,18 +69,6 @@ header {
   }
 }
 
-main {
-  @include large {
-    @include wrapper(map-get($width, 'large'));
-  }
-  @include medium {
-    @include wrapper(map-get($width, 'medium'));
-  }
-  @include small {
-    @include wrapper-small(map-get($padding, 'small'));
-  }
-}
-
 footer {
   display: flex;
   flex: 0 0 auto;
