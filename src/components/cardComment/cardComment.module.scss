@@ -1,0 +1,54 @@
+@use '/src/scss/abstracts/mixins' as *;
+
+.cardContainer {
+  width: 522px;
+  height: 440px;
+  padding: 31px 59px 70px 41px;
+  border: 2px solid #2B2A2A;
+  border-radius: 10px;
+  @include medium {
+    width: 402px;
+    padding: 31px 30px 70px 32px;
+  }
+  @include small {
+    min-width: 250px;
+    width: 250px;
+    height: 356px;
+    padding: 38px 42px 50px 20px;
+    border: 1.5px solid #2B2A2A;
+  }
+  .img {
+    width: 77px;
+    height: 77px;
+    margin-bottom: 16.5px;
+    @include small {
+      width: 42px;
+      height: 42px;
+    }
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .userName {
+    margin-bottom: 63px;
+    font-size: 2.25rem;
+    @include medium {
+      margin-bottom: 61px;
+      font-size: 2rem;
+    }
+    @include small {
+      margin-bottom: 44px;
+      font-size: 1.5rem;
+    }
+  }
+  .content {
+    font-size: 1.25rem;
+    @include medium {
+      font-size: 1.125rem;
+    }
+    @include small {
+      font-size: 0.75rem;
+    }
+  } 
+}

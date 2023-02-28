@@ -1,0 +1,29 @@
+.carousel {
+  width: 100%;
+  .scrollableContainer {
+    display: flex;
+    gap: 20px;
+    width: 100%;
+    padding: 0 3%;
+    overflow-x: auto;
+    margin-bottom: 20px;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+  .indicators {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    .indicator {
+      width: 30px;
+      height: 4px;
+      border: 0.5px solid #000000;
+      &.active {
+        background-color: #000000;
+      }
+    }
+  }
+}

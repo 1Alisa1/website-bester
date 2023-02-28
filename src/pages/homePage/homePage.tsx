@@ -1,3 +1,4 @@
+import CommentsSection from '../../components/commentsSection/commentsSection';
 import IntroSection from '../../components/introSection/introSection';
 import QuestionsSection from '../../components/questionsSection/questionsSection';
 import ServicesSection from '../../components/servicesSection/servicesSection';
@@ -10,6 +11,7 @@ const HomePage: React.FC = () => {
       <StrategySection />
       <ServicesSection />
       <QuestionsSection />
+      <CommentsSection />
     </>
   );
 };
