@@ -1,0 +1,37 @@
+@use '/src/scss/abstracts/mixins' as *;
+
+@include large {
+  .large {
+    display: block;
+  }
+  .medium {
+    display: none;
+  }
+  .small {
+    display: none;
+  }
+}
+
+@include medium {
+  .large {
+    display: none;
+  }
+  .medium {
+    display: block;
+  }
+  .small {
+    display: none;
+  }
+}
+
+@include small {
+  .large {
+    display: none;
+  }
+  .medium {
+    display: none;
+  }
+  .small {
+    display: block;
+  }
+}

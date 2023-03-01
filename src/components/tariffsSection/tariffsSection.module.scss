@@ -1,0 +1,48 @@
+@use '/src/scss/abstracts/mixins' as *;
+@use '/src/scss/abstracts/variables' as *;
+
+.tariffsSection {
+  @include large {
+    @include wrapper(map-get($width, 'large'));
+    margin-top: 150px;
+    margin-bottom: 200px;
+  }
+  @include medium {
+    @include wrapper(map-get($width, 'medium'));
+    margin-top: 150px;
+    margin-bottom: 150px;
+  }
+  @include small {
+    justify-content: center;
+    margin-bottom: 100px;
+  }
+  .content {
+    @include small {
+      @include wrapper-small(map-get($padding, 'small'));
+      max-width: 390px;
+      margin: 0 auto;
+    }
+    .title {
+      margin-bottom: 100px;
+      font-size: 64px;
+      @include medium {
+        margin-bottom: 70px;
+        font-size: 48px;
+      }
+      @include small {
+        margin-bottom: 40px;
+        font-size: 32px;
+      }
+    }
+    .cardWrapper {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      @include small {
+        flex-direction: column;
+        gap: 40px;
+      }
+    }
+  }
+}

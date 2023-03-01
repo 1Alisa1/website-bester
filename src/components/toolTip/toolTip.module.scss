@@ -1,0 +1,32 @@
+@use '/src/scss/abstracts/mixins' as *;
+
+.container {
+  position: relative;
+  display: flex;
+  .toolTip {
+    position: absolute;
+    bottom: 42px;
+    z-index: 1;
+    width: 304px;
+    height: 134px;
+    box-sizing: border-box;
+    padding: 18px 0 19px 10px;
+    border-radius: 5px;
+    border: 1px solid #C4C4C4;
+    background-color: #FFFFFF;
+    box-shadow: 0px 35px 14px rgba(13, 13, 13, 0.01), 0px 20px 12px rgba(13, 13, 13, 0.03), 0px 9px 9px rgba(13, 13, 13, 0.04), 0px 2px 5px rgba(13, 13, 13, 0.05), 0px 0px 0px rgba(13, 13, 13, 0.05);
+    line-height: 19px;
+    transition: opacity 0.3s ease;
+    @include medium {
+      width: 158px;
+      height: 164px;
+      padding: 10px 0 17px 10px;
+    }
+    @include small {
+      width: 158px;
+      height: 164px;
+      padding: 10px 0 17px 10px;
+      left: -50px;
+    }
+  }
+}
