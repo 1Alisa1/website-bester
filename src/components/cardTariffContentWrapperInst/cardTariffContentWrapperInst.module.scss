@@ -1,0 +1,17 @@
+@use '/src/scss/abstracts/mixins' as *;
+
+.cardTariffContentWrapperInst {
+  width: 414px;
+  height: 540px;
+  margin: 0 54px 47px 56px;
+  @include medium {
+    width: 333px;
+    height: 503px;
+    margin: 0 35px 47px 32px;
+  }
+  @include small {
+    width: 270px;
+    height: auto;
+    margin: 0 34px 27px 36px;
+  }
+}
