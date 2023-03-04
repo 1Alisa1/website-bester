@@ -1,7 +1,7 @@
 import styles from './cardTariff.module.scss';
 
 export interface CardTariffProps {
-  title: string;
+  title: React.ReactNode;
   content: React.ReactNode;
 }
 

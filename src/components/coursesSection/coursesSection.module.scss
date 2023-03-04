@@ -1,0 +1,51 @@
+@use '/src/scss/abstracts/mixins' as *;
+@use '/src/scss/abstracts/variables' as *;
+
+.coursesSection {
+  @include large {
+    @include wrapper(map-get($width, 'large'));
+    margin-top: 150px;
+    margin-bottom: 200px;
+  }
+  @include medium {
+    @include wrapper(map-get($width, 'medium'));
+    margin-top: 150px;
+    margin-bottom: 150px;
+  }
+  @include small {
+    justify-content: center;
+    margin-bottom: 85px;
+  }
+  .content {
+    @include small {
+      @include wrapper-small(map-get($padding, 'small'));
+      max-width: 390px;
+      margin: 0 auto;
+    }
+    .title {
+      margin-bottom: 100px;
+      font-size: 64px;
+      @include medium {
+        margin-bottom: 70px;
+        font-size: 48px;
+      }
+      @include small {
+        margin-bottom: 40px;
+        font-size: 32px;
+      }
+    }
+    .cardWrapper {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 80px;
+      @include small {
+        gap: 66px;
+      }
+      @include small {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+      }
+    }
+  }
+}
