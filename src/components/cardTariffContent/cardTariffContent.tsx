@@ -4,7 +4,7 @@ export interface CardTariffContentProps {
   description: React.ReactNode;
   price: string;
   onButtonBuy: () => void;
-  onButtonMore: () => void;
+  onButtonMore?: () => void;
 }
 
 const CardTariffContent: React.FC<CardTariffContentProps> = ({
@@ -29,11 +29,13 @@ const CardTariffContent: React.FC<CardTariffContentProps> = ({
             Купить
           </button>
         </div>
-        <div className={styles.buttonWrapper}>
+        {onButtonMore && (
+          <div className={styles.buttonWrapper}>
           <button className={styles.btnMore} onClick={onButtonMore}>
             Подробнее
           </button>
         </div>
+        )}
       </div>
     </div>
   );

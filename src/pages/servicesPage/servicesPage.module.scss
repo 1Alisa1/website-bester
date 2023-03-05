@@ -35,3 +35,28 @@
     display: block;
   }
 }
+
+.firstRow {
+  display: flex;
+  gap: 80px;
+  @include medium {
+    gap: 66px;
+  }
+  @include small {
+    flex-direction: column;
+    gap: 30px;
+  }
+}
+
+.secondRow {
+  display: flex;
+  gap: 72px;
+  align-items: center;
+  @include medium {
+    gap: 61px;
+  }
+  @include small {
+    flex-direction: column;
+    gap: 37px;
+  }
+}
