@@ -4,17 +4,20 @@
 .tariffsSection {
   @include large {
     @include wrapper(map-get($width, 'large'));
-    margin-top: 150px;
+    margin-top: 130px;
     margin-bottom: 200px;
+    padding-top: 20px;
   }
   @include medium {
     @include wrapper(map-get($width, 'medium'));
-    margin-top: 150px;
+    margin-top: 130px;
     margin-bottom: 150px;
+    padding-top: 20px;
   }
   @include small {
     justify-content: center;
-    margin-bottom: 100px;
+    margin-bottom: 90px;
+    padding-top: 10px;
   }
   .content {
     @include small {

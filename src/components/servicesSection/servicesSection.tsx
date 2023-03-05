@@ -8,16 +8,23 @@ const ServicesSection = () => {
         <h2 className={styles.title}>Наши услуги</h2>
         <div className={styles.cardContainer}>
           <CardServices
+            redirectUrl="/services#instagram"
             title="Instagram магазин"
             description={
               <>
                 <div className={styles.wrapper}>
                   <div className={styles.img}></div>
-                  <p>Продажа готовых магазинов в Instagram под разные виды товаров</p>
+                  <p>
+                    Продажа готовых магазинов в Instagram под разные виды
+                    товаров
+                  </p>
                 </div>
                 <div className={styles.wrapper}>
                   <div className={styles.img}></div>
-                  <p>Изготовление магазинов в Instagram <br className={styles.small}/> под твой товар</p>
+                  <p>
+                    Изготовление магазинов в Instagram{' '}
+                    <br className={styles.small} /> под твой товар
+                  </p>
                 </div>
                 <div className={styles.wrapper}>
                   <div className={styles.img}></div>
@@ -29,19 +36,25 @@ const ServicesSection = () => {
                 </div>
               </>
             }
-            onButtonClick={() => false}
           />
           <CardServices
+            redirectUrl="/services#site"
             title="Сайт (landing page)"
             description={
               <>
                 <div className={styles.wrapper}>
                   <div className={styles.img}></div>
-                  <p>Продажа готовых сайтов <br className={styles.medium}/> под разные товары</p>
+                  <p>
+                    Продажа готовых сайтов <br className={styles.medium} /> под
+                    разные товары
+                  </p>
                 </div>
                 <div className={styles.wrapper}>
                   <div className={styles.img}></div>
-                  <p>Изготовление сайтов <br className={styles.medium}/> под твой товар</p>
+                  <p>
+                    Изготовление сайтов <br className={styles.medium} /> под
+                    твой товар
+                  </p>
                 </div>
                 <div className={styles.wrapper}>
                   <div className={styles.img}></div>
@@ -53,15 +66,17 @@ const ServicesSection = () => {
                 </div>
               </>
             }
-            onButtonClick={() => false}
           />
           <CardServices
+            redirectUrl="/services#courses"
             title="Обучающие курсы"
             description={
               <>
                 <div className={styles.wrapper}>
                   <div className={styles.img}></div>
-                  <p>Курс с базовыми знаниями <br/> для новичков в товарке</p>
+                  <p>
+                    Курс с базовыми знаниями <br /> для новичков в товарке
+                  </p>
                 </div>
                 <div className={styles.wrapper}>
                   <div className={styles.img}></div>
@@ -69,11 +84,12 @@ const ServicesSection = () => {
                 </div>
                 <div className={styles.wrapper}>
                   <div className={styles.img}></div>
-                  <p>Курс PRO — знания для успешного <br/> старта в товарке</p>
+                  <p>
+                    Курс PRO — знания для успешного <br /> старта в товарке
+                  </p>
                 </div>
               </>
             }
-            onButtonClick={() => false}
           />
         </div>
       </div>

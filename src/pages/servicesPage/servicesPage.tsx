@@ -16,7 +16,7 @@ import styles from './servicesPage.module.scss';
 const ServicesPage: React.FC = () => {
   return (
     <>
-      <TariffsSection title="Instagram магазин">
+      <TariffsSection title="Instagram магазин" id='instagram'>
         <CardTariffBorder>
           <CardTariff
             title="Тариф «Старт»"
@@ -152,7 +152,7 @@ const ServicesPage: React.FC = () => {
           />
         </CardTariffBorder>
       </TariffsSection>
-      <TariffsSection title="Сайт (landing page)">
+      <TariffsSection title="Сайт (landing page)" id='site'>
         <CardTariffBorder>
           <CardTariff
             title="Тариф «Старт плюс»"
@@ -306,7 +306,7 @@ const ServicesPage: React.FC = () => {
           />
         </CardTariffBorder>
       </TariffsSection>
-      <CoursesSection title="Обучающие курсы">
+      <CoursesSection title="Обучающие курсы" id='courses'>
         <div className={styles.firstRow}>
           <CardTariffBorder>
             <CardTariff
