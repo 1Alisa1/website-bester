@@ -1,17 +1,28 @@
 import styles from './cardServices.module.scss';
+import { HashLink } from 'react-router-hash-link';
 
 interface CardServicesProps {
   title: string;
   description: React.ReactNode;
-  onButtonClick: () => void;
+  redirectUrl: string;
 }
 
-const CardServices: React.FC<CardServicesProps> = ({ title, description, onButtonClick }) => {
+const CardServices: React.FC<CardServicesProps> = ({
+  title,
+  description,
+  redirectUrl,
+}) => {
   return (
     <div className={styles.card}>
       <p className={styles.title}>{title}</p>
       <div className={styles.description}>{description}</div>
-        <button className={styles.button} onClick={onButtonClick}>Выбрать</button>
+      <div className={styles.buttonWrapper}>
+        <HashLink to={redirectUrl}>
+          <button className={styles.button}>
+            Выбрать
+          </button>
+        </HashLink>
+      </div>
     </div>
   );
 };
