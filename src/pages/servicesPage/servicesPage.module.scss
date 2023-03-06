@@ -60,3 +60,28 @@
     gap: 37px;
   }
 }
+
+.img {
+  position: relative;
+  margin-left: auto;
+  right: 16px;
+  top: 16px;
+  z-index: 4;
+  width: 16.5px;
+  height: 16.5px;
+  cursor: pointer;
+  @include medium {
+    right: 16px;
+    top: 16px;
+  }
+  @include small {
+    width: 19px;
+    height: 19px;
+    right: 8px;
+    top: 8px;
+  }
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}
