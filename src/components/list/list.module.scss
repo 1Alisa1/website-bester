@@ -1,4 +1,23 @@
+@use '/src/scss/abstracts/mixins' as *;
+
 .list {
   display: flex;
   flex-direction: column;
+  margin-bottom: 30px;
+  @include small {
+    margin-bottom: 25px;
+  }
+  .title {
+    margin-bottom: 35px;
+    color: #6C5ECC;
+    @include font-Roboto-700;
+    font-size: 24px;
+    @include medium {
+      font-size: 20px;
+    }
+    @include small {
+      margin-bottom: 25px;
+      font-size: 14px;
+    }
+  }
 }
