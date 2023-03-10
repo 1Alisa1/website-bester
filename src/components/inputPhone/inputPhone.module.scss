@@ -1,0 +1,11 @@
+@use "/src/scss/abstracts/mixins" as *;
+
+.input {
+  display: flex;
+  align-items: center;
+  cursor: text;
+  
+  & > span.spot {
+    color: #C4C4C4;
+  }
+}

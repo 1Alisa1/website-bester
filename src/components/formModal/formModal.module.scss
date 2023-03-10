@@ -1,0 +1,191 @@
+@use "/src/scss/abstracts/mixins" as *;
+
+.formModal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 432px;
+  height: 790px;
+  margin: 0 184px;
+  @include medium {
+    margin: 0 110px;
+  }
+  @include small {
+    width: 297px;
+    height: 691px;
+    margin: 0 21px;
+  }
+  .title {
+    margin-bottom: 26px;
+    margin-top: 47px;
+    font-size: 36px;
+    line-height: 41px;
+    text-align: center;
+    @include medium {
+      margin-bottom: 25px;
+      margin-top: 30px;
+      font-size: 32px;
+      line-height: 37px;
+    }
+    @include small {
+      margin-bottom: 20px;
+      margin-top: 34px;
+      font-size: 32px;
+      line-height: 35px;
+    }
+  }
+  .description {
+    margin-bottom: 54px;
+    text-align: center;
+    font-size: 20px;
+    line-height: 23px;
+    @include medium {
+      margin-bottom: 62px;
+      font-size: 18px;
+      line-height: 21px;
+    }
+    @include small {
+      margin-bottom: 46px;
+      font-size: 16px;
+      line-height: 19px;
+    }
+  }
+  .note {
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
+    font-size: 12px;
+    @include small {
+      margin-bottom: 20px;
+    }
+    span {
+      margin-right: 5px;
+      font-size: 24px;
+    }
+    p {
+      margin-top: 2px;
+    }
+  }
+  .form {
+    display: flex;
+    flex-direction: column;
+    label {
+      position: relative;
+      font-size: 20px;
+      line-height: 23px;
+      @include medium {
+        font-size: 18px;
+        line-height: 21px;
+      }
+      @include small {
+        font-size: 14px;
+        line-height: 16.5px;
+      }
+      & > span {
+        position: absolute;
+        left: 435px;
+        top: 15px;
+        font-size: 24px;
+        @include small {
+          left: 300px;
+        }
+      }
+    }
+    input, .inputTel {
+      width: 432px;
+      height: 55px;
+      border: 2px solid #c4c4c4;
+      border-radius: 5px;
+      margin-bottom: 20px;
+      margin-top: 6px;
+      padding: 0 17px;
+      background-color: #fdfcfc;
+      @include font-Roboto-400;
+      font-size: 20px;
+      -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+      &::placeholder {
+        color: #c4c4c4;
+      }
+      @include medium {
+        margin-top: 8px;
+        font-size: 18px;
+      }
+      @include small {
+        width: 297px;
+        height: 45px;
+        margin-bottom: 15px;
+        padding: 0 15px;
+        font-size: 14px;
+      }
+    }
+    .inputTel {
+      @include font-Roboto-monospace;
+      word-spacing: -7px;
+      @include small {
+        word-spacing: -5px;
+      }
+    }
+    .textarea {
+      width: 432px;
+      height: 124px;
+      border: 2px solid #c4c4c4;
+      border-radius: 5px;
+      margin-bottom: 50px;
+      margin-top: 6px;
+      padding: 16px 17px 16px 17px;
+      background-color: #fdfcfc;
+      @include font-Roboto-400;
+      font-size: 20px;
+      resize: none;
+      -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+      &::placeholder {
+        color: #c4c4c4;
+      }
+      @include medium {
+        margin-top: 8px;
+        font-size: 18px;
+      }
+      @include small {
+        width: 297px;
+        margin-bottom: 25px;
+        padding: 12px 15px 12px 15px;
+        font-size: 14px;
+      }
+    }
+    .inputSubmit {
+      margin-bottom: 69px;
+      border: none;
+      background-color: #c4c4c4;
+      color: #fdfcfc;
+      padding: 0;
+      font-size: 24px;
+      @include medium {
+        margin-bottom: 64px;
+        font-size: 20px;
+      }
+      @include small {
+        margin-bottom: 36px;
+        font-size: 16px;
+      }
+    }
+    .active {
+      background-color: #6C5ECC;
+      @include large {
+        &:hover {
+          background-color: #4437A1;
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.16);
+        }
+      }
+      @include medium {
+        &:hover {
+          background-color: #4437A1;
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.16);
+        }
+      }
+      &:active {
+        background-color: #40329A;
+        box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.16);;
+      }
+    }
+  }
+}
