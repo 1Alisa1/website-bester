@@ -64,12 +64,13 @@
 .img {
   position: relative;
   margin-left: auto;
-  right: 16px;
-  top: 16px;
+  right: 20px;
+  top: 18px;
   z-index: 4;
-  width: 16.5px;
-  height: 16.5px;
+  width: 17.5px;
+  height: 17.5px;
   cursor: pointer;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   @include medium {
     right: 16px;
     top: 16px;
