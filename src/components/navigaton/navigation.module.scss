@@ -1,0 +1,41 @@
+@use '/src/scss/abstracts/mixins' as *;
+
+nav {
+  display: flex;
+  align-items: center;
+  gap: 100px;
+  @include small {
+    align-items: flex-start;
+    flex-direction: column;
+    margin-top: 48px;
+    gap: 46px;
+  }
+  ul {
+    display: flex;
+    gap: 100px;
+    @include small {
+      flex-direction: column;
+      gap: 20px;
+    }
+    li {
+      a {
+        text-decoration: none;
+        color: black;
+        font-size: 1.5rem;
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+        @include medium {
+          font-size: 1.25rem;
+        }
+        @include small {
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+}
+
+.icon40 {
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+}
