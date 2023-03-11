@@ -1,0 +1,78 @@
+@use '/src/scss/abstracts/mixins' as *;
+
+.notFoundSection {
+  display: flex;
+  justify-content: center;
+  height: 79.8vh;
+  @include small {
+    height: 90vh;
+  }
+  .notFoundContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 65vh;
+    .img {
+      width: 377px;
+      height: 200px;
+      margin-bottom: 15px;
+      @include medium {
+        margin-bottom: 9px;
+      }
+      @include small {
+        width: 260px;
+        height: 140px;
+      }
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+    .text {
+      margin-bottom: 90px;
+      text-align: center;
+      font-size: 1.75rem;
+      @include medium {
+        margin-bottom: 80px;
+        font-size: 1.5rem;
+      }
+      @include small {
+        margin-bottom: 60px;
+        font-size: 1.125rem;
+      }
+    }
+    .button {
+      width: 285px;
+      height: 55px;
+      border: none;
+      border-radius: 5px;
+      background-color: #6c5ecc;
+      color: #fdfcfc;
+      -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+      @include large {
+        font-size: 1.5rem;
+        &:hover {
+          background-color: #4437a1;
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.16);
+        }
+      }
+      @include medium {
+        font-size: 1.25rem;
+        &:hover {
+          background-color: #4437a1;
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.16);
+        }
+      }
+      @include small {
+        width: 240px;
+        height: 45px;
+        font-size: 1.125rem;
+      }
+      &:active {
+        background-color: #40329a;
+        box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.16);
+      }
+    }
+  }
+}
