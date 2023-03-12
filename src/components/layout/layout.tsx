@@ -5,7 +5,7 @@ import IconsGroup from '../iconsGroup/iconsGroup';
 import Navigation from '../navigaton/navigation';
 import NavModal from '../navModal/navModal';
 import { useState } from 'react';
-import closeImg from '../../img/close.svg';
+import CloseImg from '../closeImg/closeImg';
 
 const Layout = () => {
   const [isNavModalOpen, setIsNavModalOpen] = useState(false);
@@ -24,9 +24,7 @@ const Layout = () => {
         <button className={styles.navBtn} onClick={() => setIsNavModalOpen(true)}></button>
 
         <NavModal active={isNavModalOpen} setActive={setIsNavModalOpen}>
-            <div className={styles.img} onClick={() => setIsNavModalOpen(false)}>
-              <img src={closeImg} alt="x"></img>
-            </div>
+            <CloseImg setModalActive={setIsNavModalOpen}/>
             <Navigation setActiveModal={setIsNavModalOpen}/>
         </NavModal>
 

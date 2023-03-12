@@ -16,7 +16,7 @@ import styles from './servicesPage.module.scss';
 import CardTariffModalContentWrapper from '../../components/cardTariffModalContentWrapper/cardTariffModalContentWrapper';
 import { useState } from 'react';
 import CardTariffModal from '../../components/cardTariffModal/cardTariffModal';
-import closeImg from '../../img/close.svg';
+import CloseImg from '../../components/closeImg/closeImg';
 
 const ServicesPage: React.FC = () => {
   const [modalContentIndex, setModalContentIndex] = useState<number>(0);
@@ -1061,9 +1061,7 @@ const ServicesPage: React.FC = () => {
       <Modal active={modalActive} setActive={setModalActive}>
         <CardTariffBorderGradient isIcon={false}>
           <CardTariffModalContentWrapper>
-            <div className={styles.img} onClick={() => setModalActive(false)}>
-              <img src={closeImg} alt="x"></img>
-            </div>
+            <CloseImg setModalActive={setModalActive}/>
             {modalContents[modalContentIndex]}
           </CardTariffModalContentWrapper>
         </CardTariffBorderGradient>
