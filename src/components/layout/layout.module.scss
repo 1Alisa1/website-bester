@@ -1,19 +1,19 @@
-@use '/src/scss/abstracts/variables' as *;
-@use '/src/scss/abstracts/mixins' as *;
+@use "/src/scss/abstracts/variables" as *;
+@use "/src/scss/abstracts/mixins" as *;
 
 header {
   @include large {
-    @include wrapper(map-get($width, 'large'));
+    @include wrapper(map-get($width, "large"));
     min-height: 156px;
     margin-bottom: 50px;
   }
   @include medium {
-    @include wrapper(map-get($width, 'medium'));
+    @include wrapper(map-get($width, "medium"));
     min-height: 140px;
     margin-bottom: 20px;
   }
   @include small {
-    @include wrapper-small(map-get($padding, 'small'));
+    @include wrapper-small(map-get($padding, "small"));
     min-height: 58px;
     margin-bottom: 50px;
   }
@@ -34,37 +34,21 @@ header {
       height: 100%;
     }
   }
-  nav {
-    display: flex;
-    align-items: center;
-    gap: 100px;
-    ul {
-      display: flex;
-      gap: 100px;
-      @include small {
-        display: none;
-      }
-      li {
-        a {
-          text-decoration: none;
-          color: black;
-          font-size: 1.5rem;
-          @include medium {
-            font-size: 1.25rem;
-          }
-        }
-      }
+  .headerNav {
+    @include small {
+      display: none;
     }
   }
   .navBtn {
     display: none;
     @include small {
       display: block;
-      background-image: url('../../img/navBtn.svg');
+      background-image: url("../../img/navBtn.svg");
       width: 21px;
       height: 19px;
       border: none;
       background-color: transparent;
+      -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
     }
   }
 }
@@ -73,19 +57,25 @@ footer {
   display: flex;
   flex: 0 0 auto;
   width: 100%;
-  background: linear-gradient(to right, #ffde6e 0%, #ffde6e 50%, #a798fe 50%, #a798fe 100%);
+  background: linear-gradient(
+    to right,
+    #ffde6e 0%,
+    #ffde6e 50%,
+    #a798fe 50%,
+    #a798fe 100%
+  );
   @include small {
     justify-content: center;
   }
   .content {
     @include large {
-      @include wrapper(map-get($width, 'large'));
+      @include wrapper(map-get($width, "large"));
     }
     @include medium {
-      @include wrapper(map-get($width, 'medium'));
+      @include wrapper(map-get($width, "medium"));
     }
     @include small {
-      @include wrapper-small(map-get($padding, 'small'));
+      @include wrapper-small(map-get($padding, "small"));
       height: 400px;
       flex-wrap: wrap;
       font-size: 0.875rem;
@@ -201,4 +191,20 @@ footer {
   width: 40px;
   height: 40px;
   border-radius: 8px;
+}
+
+.img {
+  position: relative;
+  margin-left: auto;
+  z-index: 4;
+  right: 10px;
+  top: 10px;
+  width: 21px;
+  height: 21px;
+  cursor: pointer;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  img {
+    width: 100%;
+    height: 100%;
+  }
 }

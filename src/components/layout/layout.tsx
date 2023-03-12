@@ -1,14 +1,14 @@
-import { Link, NavLink, Outlet } from 'react-router-dom';
+import { Link, Outlet } from 'react-router-dom';
 import styles from './layout.module.scss';
 import logo from '../../img/logo.svg';
 import IconsGroup from '../iconsGroup/iconsGroup';
+import Navigation from '../navigaton/navigation';
+import NavModal from '../navModal/navModal';
+import { useState } from 'react';
+import closeImg from '../../img/close.svg';
 
 const Layout = () => {
-  const activeLink = {
-    color: '#6C5ECC',
-    textDecoration: 'underline',
-    textUnderlineOffset: '6px',
-  };
+  const [isNavModalOpen, setIsNavModalOpen] = useState(false);
 
   return (
     <>
@@ -18,28 +18,18 @@ const Layout = () => {
             <img src={logo} alt="BESTEP"></img>
           </Link>
         </div>
-        <nav>
-          <ul className={styles.headerList}>
-            <li className={styles.listItem}>
-              <NavLink
-                to="/"
-                style={({ isActive }) => (isActive ? activeLink : undefined)}
-              >
-                Главная
-              </NavLink>
-            </li>
-            <li className={styles.listItem}>
-              <NavLink
-                to="/services"
-                style={({ isActive }) => (isActive ? activeLink : undefined)}
-              >
-                Услуги
-              </NavLink>
-            </li>
-          </ul>
-          <IconsGroup iconClass={styles.icon40} />
-        </nav>
-        <button className={styles.navBtn}></button>
+        <div className={styles.headerNav}>
+          <Navigation />
+        </div>
+        <button className={styles.navBtn} onClick={() => setIsNavModalOpen(true)}></button>
+
+        <NavModal active={isNavModalOpen} setActive={setIsNavModalOpen}>
+            <div className={styles.img} onClick={() => setIsNavModalOpen(false)}>
+              <img src={closeImg} alt="x"></img>
+            </div>
+            <Navigation setActiveModal={setIsNavModalOpen}/>
+        </NavModal>
+
       </header>
       <main>
         <Outlet />
