@@ -11,16 +11,40 @@ import ListItem from '../../components/listItem/listItem';
 import Modal from '../../components/modal/modal';
 import TariffsSection from '../../components/tariffsSection/tariffsSection';
 import crown from '../../img/Crown.svg';
-import prompt from '../../img/prompt.svg';
+import circle from '../../img/circle.svg';
 import styles from './servicesPage.module.scss';
 import CardTariffModalContentWrapper from '../../components/cardTariffModalContentWrapper/cardTariffModalContentWrapper';
 import { useState } from 'react';
 import CardTariffModal from '../../components/cardTariffModal/cardTariffModal';
 import CloseImg from '../../components/closeImg/closeImg';
+import ListItemWithToolTip from '../../components/listItemWithToolTip/listItemWithToolTip';
 
 const ServicesPage: React.FC = () => {
   const [modalContentIndex, setModalContentIndex] = useState<number>(0);
   const [modalActive, setModalActive] = useState(false);
+  const [modalToolTipActive, setModalToolTipActive] = useState(false);
+  const [modalToolTipContent, setModalToolTipContent] = useState<React.ReactNode>(null);
+
+  const toolTipContent = (
+    <ul>
+      <li>
+        <img src={circle} alt="circle"></img>
+        <p className={styles.text}>
+          13 ответов <br className={styles.medium} /> на возражение “дорого”
+        </p>
+      </li>
+      <li>
+        <img src={circle} alt="circle"></img>
+        <p className={styles.text}>
+          Чек-лист продажника <br className={styles.medium} /> в direct
+        </p>
+      </li>
+      <li>
+        <img src={circle} alt="circle"></img>
+        <p className={styles.text}>Всё про таргет</p>
+      </li>
+    </ul>
+  );
 
   const modalContents = [
     (
@@ -600,20 +624,21 @@ const ServicesPage: React.FC = () => {
                         }
                       />
                       <ListItem text={<p>База поставщиков</p>} />
-                      <ListItem
-                        text={
-                          <p
-                            style={{
-                              color: '#6C5ECC',
-                              borderBottom: '1px solid #6C5ECC',
-                              lineHeight: '0.9',
-                            }}
-                          >
-                            Любой курс в подарок на выбор
-                          </p>
-                        }
-                        prompt={prompt}
-                      />
+                      <ListItemWithToolTip
+                        setToolTipModalActive={setModalToolTipActive}
+                        setToolTipModalContent={setModalToolTipContent}
+                        toolTipContent={toolTipContent}
+                      >
+                        <p
+                          style={{
+                            color: '#6C5ECC',
+                            borderBottom: '1px solid #6C5ECC',
+                            lineHeight: '0.9',
+                          }}
+                        >
+                          Любой курс в подарок на выбор
+                        </p>
+                      </ListItemWithToolTip>
                     </List>
                   }
                   price="69"
@@ -644,20 +669,21 @@ const ServicesPage: React.FC = () => {
                         }
                       />
                       <ListItem text={<p>База поставщиков</p>} />
-                      <ListItem
-                        text={
-                          <p
-                            style={{
-                              color: '#6C5ECC',
-                              borderBottom: '1px solid #6C5ECC',
-                              lineHeight: '0.9',
-                            }}
-                          >
-                            Все 3 курса в подарок
-                          </p>
-                        }
-                        prompt={prompt}
-                      />
+                      <ListItemWithToolTip
+                        setToolTipModalActive={setModalToolTipActive}
+                        setToolTipModalContent={setModalToolTipContent}
+                        toolTipContent={toolTipContent}
+                      >
+                        <p
+                          style={{
+                            color: '#6C5ECC',
+                            borderBottom: '1px solid #6C5ECC',
+                            lineHeight: '0.9',
+                          }}
+                        >
+                          Все 3 курса в подарок
+                        </p>
+                      </ListItemWithToolTip>
                       <ListItem text={<p>Онлайн консультация по запуску</p>} />
                     </List>
                   }
@@ -689,20 +715,21 @@ const ServicesPage: React.FC = () => {
                         }
                       />
                       <ListItem text={<p>База поставщиков</p>} />
-                      <ListItem
-                        text={
-                          <p
-                            style={{
-                              color: '#6C5ECC',
-                              borderBottom: '1px solid #6C5ECC',
-                              lineHeight: '0.9',
-                            }}
-                          >
-                            Все 3 курса в подарок
-                          </p>
-                        }
-                        prompt={prompt}
-                      />
+                      <ListItemWithToolTip
+                        setToolTipModalActive={setModalToolTipActive}
+                        setToolTipModalContent={setModalToolTipContent}
+                        toolTipContent={toolTipContent}
+                      >
+                        <p
+                          style={{
+                            color: '#6C5ECC',
+                            borderBottom: '1px solid #6C5ECC',
+                            lineHeight: '0.9',
+                          }}
+                        >
+                          Все 3 курса в подарок
+                        </p>
+                      </ListItemWithToolTip>
                       <ListItem text={<p>Помощь в поиске поставщика</p>} />
                       <ListItem
                         text={
@@ -745,20 +772,21 @@ const ServicesPage: React.FC = () => {
                         }
                       />
                       <ListItem text={<p>База поставщиков</p>} />
-                      <ListItem
-                        text={
-                          <p
-                            style={{
-                              color: '#6C5ECC',
-                              borderBottom: '1px solid #6C5ECC',
-                              lineHeight: '0.9',
-                            }}
-                          >
-                            Любой курс в подарок на выбор
-                          </p>
-                        }
-                        prompt={prompt}
-                      />
+                      <ListItemWithToolTip
+                        setToolTipModalActive={setModalToolTipActive}
+                        setToolTipModalContent={setModalToolTipContent}
+                        toolTipContent={toolTipContent}
+                      >
+                        <p
+                          style={{
+                            color: '#6C5ECC',
+                            borderBottom: '1px solid #6C5ECC',
+                            lineHeight: '0.9',
+                          }}
+                        >
+                          Любой курс в подарок на выбор
+                        </p>
+                      </ListItemWithToolTip>
                     </List>
                   }
                   price="159"
@@ -796,20 +824,21 @@ const ServicesPage: React.FC = () => {
                           </p>
                         }
                       />
-                      <ListItem
-                        text={
-                          <p
-                            style={{
-                              color: '#6C5ECC',
-                              borderBottom: '1px solid #6C5ECC',
-                              lineHeight: '0.9',
-                            }}
-                          >
-                            Все 3 курса в подарок
-                          </p>
-                        }
-                        prompt={prompt}
-                      />
+                      <ListItemWithToolTip
+                        setToolTipModalActive={setModalToolTipActive}
+                        setToolTipModalContent={setModalToolTipContent}
+                        toolTipContent={toolTipContent}
+                      >
+                        <p
+                          style={{
+                            color: '#6C5ECC',
+                            borderBottom: '1px solid #6C5ECC',
+                            lineHeight: '0.9',
+                          }}
+                        >
+                          Все 3 курса в подарок
+                        </p>
+                      </ListItemWithToolTip>
                       <ListItem text={<p>База поставщиков</p>} />
                     </List>
                   }
@@ -851,20 +880,21 @@ const ServicesPage: React.FC = () => {
                           </p>
                         }
                       />
-                      <ListItem
-                        text={
-                          <p
-                            style={{
-                              color: '#6C5ECC',
-                              borderBottom: '1px solid #6C5ECC',
-                              lineHeight: '0.9',
-                            }}
-                          >
-                            Все 3 курса в подарок
-                          </p>
-                        }
-                        prompt={prompt}
-                      />
+                      <ListItemWithToolTip
+                        setToolTipModalActive={setModalToolTipActive}
+                        setToolTipModalContent={setModalToolTipContent}
+                        toolTipContent={toolTipContent}
+                      >
+                        <p
+                          style={{
+                            color: '#6C5ECC',
+                            borderBottom: '1px solid #6C5ECC',
+                            lineHeight: '0.9',
+                          }}
+                        >
+                          Все 3 курса в подарок
+                        </p>
+                      </ListItemWithToolTip>
                       <ListItem text={<p>База поставщиков</p>} />
                       <ListItem text={<p>Помощь в поиске поставщика</p>} />
                       <ListItem
@@ -1065,6 +1095,9 @@ const ServicesPage: React.FC = () => {
             {modalContents[modalContentIndex]}
           </CardTariffModalContentWrapper>
         </CardTariffBorderGradient>
+      </Modal>
+      <Modal active={modalToolTipActive} setActive={setModalToolTipActive}>
+        {modalToolTipContent}
       </Modal>
     </>
   );
