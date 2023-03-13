@@ -1,7 +1,7 @@
-import CardServices from '../cardServices/cardServices';
-import styles from './servicesSection.module.scss';
+import CardServices from "../cardServices/cardServices";
+import styles from "./servicesSection.module.scss";
 
-const ServicesSection = () => {
+const ServicesSection: React.FC = () => {
   return (
     <section className={styles.services}>
       <div className={styles.content}>
@@ -15,15 +15,15 @@ const ServicesSection = () => {
                 <div className={styles.wrapper}>
                   <div className={styles.img}></div>
                   <p>
-                    Продажа готовых магазинов в Instagram под разные виды
-                    товаров
+                    Продажа готовых магазинов <br className={styles.medium} /> в
+                    Instagram <br className={styles.large} /> под разные товары
                   </p>
                 </div>
                 <div className={styles.wrapper}>
                   <div className={styles.img}></div>
                   <p>
-                    Изготовление магазинов в Instagram{' '}
-                    <br className={styles.small} /> под твой товар
+                    Изготовление магазинов <br className={styles.medium} /> в
+                    Instagram <br className={styles.small} /> под твой товар
                   </p>
                 </div>
                 <div className={styles.wrapper}>
@@ -45,8 +45,9 @@ const ServicesSection = () => {
                 <div className={styles.wrapper}>
                   <div className={styles.img}></div>
                   <p>
-                    Продажа готовых сайтов <br className={styles.medium} /> под
-                    разные товары
+                    Продажа готовых сайтов <br className={styles.large} />{" "}
+                    <br className={styles.medium} />{" "}
+                    <br className={styles.small} /> под разные товары
                   </p>
                 </div>
                 <div className={styles.wrapper}>
@@ -80,7 +81,10 @@ const ServicesSection = () => {
                 </div>
                 <div className={styles.wrapper}>
                   <div className={styles.img}></div>
-                  <p>Курс с основами знаний для быстрого старта в товарке</p>
+                  <p>
+                    Курс с основами знаний <br className={styles.medium} /> для
+                    быстрого старта в товарке
+                  </p>
                 </div>
                 <div className={styles.wrapper}>
                   <div className={styles.img}></div>

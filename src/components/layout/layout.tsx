@@ -1,11 +1,11 @@
-import { Link, Outlet } from 'react-router-dom';
-import styles from './layout.module.scss';
-import logo from '../../img/logo.svg';
-import IconsGroup from '../iconsGroup/iconsGroup';
-import Navigation from '../navigaton/navigation';
-import NavModal from '../navModal/navModal';
-import { useState } from 'react';
-import CloseImg from '../closeImg/closeImg';
+import { Link, Outlet } from "react-router-dom";
+import styles from "./layout.module.scss";
+import logo from "../../img/logo.svg";
+import IconsGroup from "../iconsGroup/iconsGroup";
+import Navigation from "../navigaton/navigation";
+import NavModal from "../navModal/navModal";
+import { useState } from "react";
+import CloseImg from "../closeImg/closeImg";
 
 const Layout = () => {
   const [isNavModalOpen, setIsNavModalOpen] = useState(false);
@@ -18,16 +18,21 @@ const Layout = () => {
             <img src={logo} alt="BESTEP"></img>
           </Link>
         </div>
+        <div className={styles.icons}>
+          <IconsGroup iconClass={styles.icon40} />
+        </div>
         <div className={styles.headerNav}>
           <Navigation />
         </div>
-        <button className={styles.navBtn} onClick={() => setIsNavModalOpen(true)}></button>
+        <button
+          className={styles.navBtn}
+          onClick={() => setIsNavModalOpen(true)}
+        ></button>
 
         <NavModal active={isNavModalOpen} setActive={setIsNavModalOpen}>
-            <CloseImg setModalActive={setIsNavModalOpen}/>
-            <Navigation setActiveModal={setIsNavModalOpen}/>
+          <CloseImg setModalActive={setIsNavModalOpen} />
+          <Navigation setActiveModal={setIsNavModalOpen} />
         </NavModal>
-
       </header>
       <main>
         <Outlet />
@@ -35,9 +40,7 @@ const Layout = () => {
       <footer>
         <div className={styles.content}>
           <div className={styles.footerLogo}>
-            <Link to="/">
-              <img src={logo} alt="BESTEP"></img>
-            </Link>
+            <img src={logo} alt="BESTEP"></img>
           </div>
           <div className={styles.footerInfo}>
             <div className={styles.firstBlock}>

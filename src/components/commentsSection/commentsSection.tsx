@@ -59,11 +59,6 @@ const CommentsSection: React.FC = () => {
           })}
         </Carousel>
       </div>
-      <div className={styles.dots}>
-        <div className={`${styles.dot} ${styles.active}`}></div>
-        <div className={styles.dot}></div>
-        <div className={styles.dot}></div>
-      </div>
       <button className={styles.button}>
         Смотреть все
         <img src={inst} alt="inst"></img>

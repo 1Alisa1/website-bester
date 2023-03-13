@@ -1,6 +1,6 @@
 import CardTariff from '../../components/cardTariff/cardTariff';
 import CardTariffBorder from '../../components/cardTariffBorder/cardTariffBorder';
-import CardTariffBorderGradient from '../../components/cardTariffBorderGradient/cardTariffBorderGradient';
+import CardBorderGradient from '../../components/cardBorderGradient/cardBorderGradient';
 import CardTariffContent from '../../components/cardTariffContent/cardTariffContent';
 import CardTariffContentWrapperCourses from '../../components/cardTariffContentWrapperCourses/cardTariffContentWrapperCourses';
 import CardTariffContentWrapperInst from '../../components/cardTariffContentWrapperInst/cardTariffContentWrapperInst';
@@ -652,7 +652,7 @@ const ServicesPage: React.FC = () => {
             }
           />
         </CardTariffBorder>
-        <CardTariffBorderGradient isIcon={true}>
+        <CardBorderGradient isIcon={true}>
           <CardTariff
             title="Тариф «Стандарт»"
             content={
@@ -697,7 +697,7 @@ const ServicesPage: React.FC = () => {
               </CardTariffContentWrapperInst>
             }
           />
-        </CardTariffBorderGradient>
+        </CardBorderGradient>
         <CardTariffBorder icon={crown}>
           <CardTariff
             title="Тариф «VIP»"
@@ -800,7 +800,7 @@ const ServicesPage: React.FC = () => {
             }
           />
         </CardTariffBorder>
-        <CardTariffBorderGradient isIcon={true}>
+        <CardBorderGradient isIcon={true}>
           <CardTariff
             title="Тариф «Стандарт плюс»"
             content={
@@ -852,7 +852,7 @@ const ServicesPage: React.FC = () => {
               </CardTariffContentWrapperWeb>
             }
           />
-        </CardTariffBorderGradient>
+        </CardBorderGradient>
         <CardTariffBorder icon={crown}>
           <CardTariff
             title="Тариф «VIP плюс»"
@@ -926,7 +926,7 @@ const ServicesPage: React.FC = () => {
             <CardTariff
               title={
                 <p>
-                  13 ответов <br className={styles.small} /> на возражение
+                  13 ответов <br className={styles.medium} /> <br className={styles.small} /> на возражение
                   «дорого»
                 </p>
               }
@@ -938,8 +938,8 @@ const ServicesPage: React.FC = () => {
                         <ListItem
                           text={
                             <p>
-                              Ты увидишь свои ошибки, из-за которых многие
-                              клиенты отпадали после названия цены
+                              Ты увидишь свои ошибки, из-за которых <br className={styles.small} /> многие
+                              клиенты отпадали после <br className={styles.small} /> названия цены
                             </p>
                           }
                         />
@@ -947,7 +947,7 @@ const ServicesPage: React.FC = () => {
                           text={
                             <p>
                               Поймёшь, как легко можно обработать{' '}
-                              <br className={styles.medium} /> возражение
+                              <br className={styles.medium} /> <br className={styles.small} /> возражение
                               “дорого”
                             </p>
                           }
@@ -957,7 +957,7 @@ const ServicesPage: React.FC = () => {
                             <p>
                               Узнаешь секретные фишки от нас,{' '}
                               <br className={styles.small} /> которые мы
-                              используем <br className={styles.large} /> в своих
+                              используем <br className={styles.large} /> в своих <br className={styles.small} />
                               переговорах
                             </p>
                           }
@@ -975,7 +975,7 @@ const ServicesPage: React.FC = () => {
             <CardTariff
               title={
                 <p>
-                  Чек-лист продажника <br className={styles.small} /> в direct
+                  Чек-лист продажника <br className={styles.medium} /> <br className={styles.small} /> в direct
                 </p>
               }
               content={
@@ -986,16 +986,16 @@ const ServicesPage: React.FC = () => {
                         <ListItem
                           text={
                             <p>
-                              Узнаешь, как вести переписку, чтобы подписчики{' '}
+                              Узнаешь, как вести переписку, чтобы <br className={styles.small} /> подписчики{' '}
                               <br className={styles.medium} /> не просто
-                              задавали вопросы, а совершали покупки
+                              задавали вопросы, <br className={styles.small} /> а совершали покупки
                             </p>
                           }
                         />
                         <ListItem
                           text={
                             <p>
-                              На реальных примерах увидишь какие ошибки
+                              На реальных примерах увидишь какие <br className={styles.small} /> ошибки
                               совершают <br className={styles.large} /> другие
                               магазины
                             </p>
@@ -1033,7 +1033,7 @@ const ServicesPage: React.FC = () => {
                         <ListItem
                           text={
                             <p>
-                              Подробно разберём какие цели и задачи выполняет{' '}
+                              Подробно разберём какие цели и задачи <br className={styles.small} /> выполняет{' '}
                               <br className={styles.large} /> таргетированная
                               реклама
                             </p>
@@ -1042,16 +1042,16 @@ const ServicesPage: React.FC = () => {
                         <ListItem
                           text={
                             <p>
-                              На реальном примере покажем, как настроить рекламу
-                              через Ads Manager и в приложении Instagram
+                              На реальном примере покажем, <br className={styles.medium} /> <br className={styles.small} /> как настроить рекламу
+                              через Ads <br className={styles.small} /> Manager <br className={styles.medium} /> и в приложении Instagram
                             </p>
                           }
                         />
                         <ListItem
                           text={
                             <p>
-                              Расскажем, как определить эффективность рекламы и
-                              дадим 5 советов, которыми мы пользуемся
+                              Расскажем, как определить <br className={styles.small} /> эффективность рекламы и
+                              дадим 5 <br className={styles.small} /> советов, которыми <br className={styles.medium} /> мы пользуемся
                             </p>
                           }
                         />
@@ -1064,7 +1064,7 @@ const ServicesPage: React.FC = () => {
               }
             />
           </CardTariffBorder>
-          <CardTariffBorderGradient isIcon={true}>
+          <CardBorderGradient isIcon={true}>
             <CardTariff
               title="Комбо"
               content={
@@ -1085,16 +1085,16 @@ const ServicesPage: React.FC = () => {
                 </CardTariffContentWrapperCourses>
               }
             />
-          </CardTariffBorderGradient>
+          </CardBorderGradient>
         </div>
       </CoursesSection>
       <Modal active={modalActive} setActive={setModalActive}>
-        <CardTariffBorderGradient isIcon={false}>
+        <CardBorderGradient isIcon={false}>
           <CardTariffModalContentWrapper>
             <CloseImg setModalActive={setModalActive}/>
             {modalContents[modalContentIndex]}
           </CardTariffModalContentWrapper>
-        </CardTariffBorderGradient>
+        </CardBorderGradient>
       </Modal>
       <Modal active={modalToolTipActive} setActive={setModalToolTipActive}>
         {modalToolTipContent}
