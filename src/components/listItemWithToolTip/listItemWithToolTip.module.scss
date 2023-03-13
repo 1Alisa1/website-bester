@@ -1,0 +1,63 @@
+@use "/src/scss/abstracts/mixins" as *;
+
+.wrapper {
+  position: relative;
+  &.notMobile {
+    display: block;
+    @include small {
+      display: none;
+    }
+  }
+  &.mobile {
+    display: none;
+    @include small {
+      display: block;
+      cursor: pointer;
+      -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    }
+  }
+  .toolTipContainer {
+    position: relative;
+    display: inline-block;
+    .toolTipWrapper {
+      position: absolute;
+      bottom: 42px;
+      display: flex;
+      transition: opacity 0.3s ease;
+      z-index: -1;
+      opacity: 0;
+      &.active {
+        z-index: 5;
+        opacity: 1;
+      }
+    }
+  }
+  .prompt {
+    position: absolute;
+    bottom: 75%;
+    left: 100%;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    @include medium {
+      width: 20px;
+      height: 20px;
+    }
+    @include small {
+      bottom: 65%;
+      width: 16px;
+      height: 16px;
+    }
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+.closeImg {
+  display: none;
+  @include small {
+    display: block;
+  }
+}
