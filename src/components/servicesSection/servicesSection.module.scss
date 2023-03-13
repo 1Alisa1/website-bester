@@ -33,17 +33,17 @@
     .title {
       margin-bottom: 100px;
       padding-top: 120px;
-      font-size: 64px;
+      font-size: 4rem;
       line-height: 1.2;
       @include medium {
         margin-bottom: 70px;
         padding-top: 60px;
-        font-size: 48px;
+        font-size: 3rem;
       }
       @include small {
         margin-bottom: 40px;
         padding-top: 32px;
-        font-size: 32px;
+        font-size: 2rem;
       }
     }
     .cardContainer {
@@ -67,22 +67,30 @@
         margin-bottom: 28px;
         gap: 20px;
         line-height: 1.15;
+        .large {
+          display: block;
+        }
         .medium {
           display: none;
         }
+        .small {
+          display: none;
+        }
         @include medium {
-          gap: 10px;
-          .small {
+          .large {
             display: none;
           }
           .medium {
             display: block;
           }
+          .small {
+            display: none;
+          }
         }
         @include small {
-          gap: 5px;
+          gap: 13px;
           margin-bottom: 20px;
-          br {
+          .large {
             display: none;
           }
           .small {
@@ -97,16 +105,15 @@
           background-size: contain;
           min-width: 24px;
           height: 16px;
-          margin-top: 1px;
+          margin-top: 2px;
           @include medium {
             min-width: 23px;
             height: 15px;
-            margin-top: 2px;
           }
           @include small {
             min-width: 16px;
             height: 9px;
-            margin-top: 1px;
+            margin-top: 0px;
           }
         }
       }

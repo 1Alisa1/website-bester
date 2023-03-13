@@ -1,11 +1,11 @@
-import styles from './cardTariffBorderGradient.module.scss';
+import styles from './cardBorderGradient.module.scss';
 
-export interface CardTariffBorderGradientProps {
+export interface CardBorderGradientProps {
   children: React.ReactNode;
   isIcon: boolean;
 }
 
-const CardTariffBorderGradient: React.FC<CardTariffBorderGradientProps> = ({
+const CardBorderGradient: React.FC<CardBorderGradientProps> = ({
   children,
   isIcon,
 }) => {
@@ -23,4 +23,4 @@ const CardTariffBorderGradient: React.FC<CardTariffBorderGradientProps> = ({
   );
 };
 
-export default CardTariffBorderGradient;
+export default CardBorderGradient;

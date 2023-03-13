@@ -1,15 +1,15 @@
-@use '/src/scss/abstracts/mixins' as *;
-@use '/src/scss/abstracts/variables' as *;
+@use "/src/scss/abstracts/mixins" as *;
+@use "/src/scss/abstracts/variables" as *;
 
 .commentsSection {
   display: flex;
   flex-direction: column;
   @include large {
-    @include wrapper(map-get($width, 'large'));
+    @include wrapper(map-get($width, "large"));
     margin-bottom: 200px;
   }
   @include medium {
-    @include wrapper(map-get($width, 'medium'));
+    @include wrapper(map-get($width, "medium"));
     margin-bottom: 150px;
   }
   @include small {
@@ -23,7 +23,7 @@
       font-size: 3rem;
     }
     @include small {
-      @include wrapper-small(map-get($padding, 'small'));
+      @include wrapper-small(map-get($padding, "small"));
       margin-bottom: 40px;
       font-size: 2rem;
     }
@@ -53,15 +53,6 @@
     }
     @include small {
       display: none;
-      .large {
-        display: none;
-      }
-      .medium {
-        display: none;
-      }
-      .small {
-        display: block;
-      }
     }
   }
   .commentsContainerMobile {
@@ -89,23 +80,31 @@
     background-color: #6c5ecc;
     color: #fdfcfc;
     font-size: 1.5rem;
-    &:hover {
-      background-color: #4437A1;
-      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.16);
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    @include large {
+      &:hover {
+        background-color: #4437a1;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.16);
+      }
     }
-    &:active {
-      background-color: #40329A;
-      box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.16);
-    }
+    
     @include medium {
       width: 235px;
       font-size: 1.25rem;
+      &:hover {
+        background-color: #4437a1;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.16);
+      }
     }
     @include small {
       width: 94%;
       height: 45px;
       margin: 0 3%;
       font-size: 1rem;
+    }
+    &:active {
+      background-color: #40329a;
+      box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.16);
     }
     img {
       width: 30px;

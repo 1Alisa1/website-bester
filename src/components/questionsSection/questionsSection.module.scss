@@ -30,11 +30,38 @@
     display: grid;
     grid-template-columns: repeat(2, 45%);
     gap: 10%;
+    .large {
+      display: block;
+    }
+    .medium {
+      display: none;
+    }
+    .small {
+      display: none;
+    }
     @include medium {
       display: block;
+      .large {
+        display: none;
+      }
+      .medium {
+        display: block;
+      }
+      .small {
+        display: none;
+      }
     }
     @include small {
       display: block;
+      .large {
+        display: none;
+      }
+      .medium {
+        display: none;
+      }
+      .small {
+        display: block;
+      }
     }
   }
 }

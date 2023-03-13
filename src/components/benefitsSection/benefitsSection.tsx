@@ -1,13 +1,13 @@
-import CardBenefit from '../cardBenefit/cardBenefit';
-import styles from './benefitsSection.module.scss';
-import checkSquare from '../../img/CheckSquare.svg';
-import coins from '../../img/Coins.svg';
-import star from '../../img/Vector.svg';
-import gift from '../../img/Gift.svg';
-import article from '../../img/Article.svg';
-import shieldCheck from '../../img/ShieldCheck.svg';
-import Carousel from '../carousel/carousel';
-import { CarouselItem } from '../carouselItem/carouselItem';
+import CardBenefit from "../cardBenefit/cardBenefit";
+import styles from "./benefitsSection.module.scss";
+import checkSquare from "../../img/CheckSquare.svg";
+import coins from "../../img/Coins.svg";
+import star from "../../img/Vector.svg";
+import gift from "../../img/Gift.svg";
+import article from "../../img/Article.svg";
+import shieldCheck from "../../img/ShieldCheck.svg";
+import Carousel from "../carousel/carousel";
+import { CarouselItem } from "../carouselItem/carouselItem";
 
 const BenefitsSection: React.FC = () => {
   const benefits = [
@@ -19,7 +19,7 @@ const BenefitsSection: React.FC = () => {
           <p>
             Мы даём своим клиентам <br className={styles.small} /> готовый
             бизнес, который полностью готов <br className={styles.medium} /> к
-            запуску <br className={styles.large} />{' '}
+            запуску <br className={styles.large} />{" "}
             <br className={styles.small} /> и дальнейшей работе
           </p>
         }
@@ -31,7 +31,7 @@ const BenefitsSection: React.FC = () => {
         description={
           <p>
             Каждый наш клиент получает <br className={styles.small} /> в подарок
-            курсы по продвижению и возможность консультаций{' '}
+            курсы по продвижению и возможность консультаций{" "}
             <br className={styles.small} /> по запуску
           </p>
         }
@@ -44,7 +44,7 @@ const BenefitsSection: React.FC = () => {
         title="Цена"
         description={
           <p>
-            Мы стараемся держать демократичную цену на свои тарифы, чтобы каждый{' '}
+            Мы стараемся держать демократичную цену на свои тарифы, чтобы каждый{" "}
             <br className={styles.small} /> желающий смог воспользоваться нашими
             услугами
           </p>
@@ -56,10 +56,10 @@ const BenefitsSection: React.FC = () => {
         title="Информативность"
         description={
           <p>
-            Мы публикуем актуальную информацию <br className={styles.large} />{' '}
-            из сферы товарного <br className={styles.small} /> бизнеса, чтобы
-            каждый <br className={styles.small} /> наш подписчик был в курсе
-            событий
+            Мы публикуем актуальную информацию <br className={styles.large} />{" "}
+            из сферы <br className={styles.small} /> товарного бизнеса,{" "}
+            <br className={styles.small} /> чтобы каждый наш подписчик{" "}
+            <br className={styles.small} /> был в курсе событий
           </p>
         }
         gradient="linear-gradient(90deg, #DFC4A2 0%, #C7B1CA 100%)"
@@ -71,7 +71,7 @@ const BenefitsSection: React.FC = () => {
         title="Уникальность"
         description={
           <p>
-            Мы первые и единственные, <br className={styles.medium} />{' '}
+            Мы первые и единственные, <br className={styles.medium} />{" "}
             <br className={styles.small} /> кто запустил данные услуги в РБ
           </p>
         }
@@ -83,10 +83,10 @@ const BenefitsSection: React.FC = () => {
         title="Официальность"
         description={
           <p>
-            Мы работаем официально <br className={styles.medium} />{' '}
-            <br className={styles.small} /> и по договору. Оплата производится{' '}
-            <br className={styles.medium} /> после принятия{' '}
-            <br className={styles.small} /> работ
+            Мы работаем официально <br className={styles.medium} />{" "}
+            <br className={styles.small} /> и по договору. Оплата производится{" "}
+            <br className={styles.small} /> <br className={styles.medium} />{" "}
+            после принятия работ
           </p>
         }
         gradient="linear-gradient(90deg, #C4AFCE 0%, #AB9CF6 100%)"

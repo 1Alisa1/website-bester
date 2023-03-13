@@ -45,11 +45,14 @@
   }
   .content {
     font-size: 1.25rem;
+    line-height: 23px;
     @include medium {
       font-size: 1.125rem;
+      line-height: 21px;
     }
     @include small {
       font-size: 0.75rem;
+      line-height: 15px;
     }
   } 
 }

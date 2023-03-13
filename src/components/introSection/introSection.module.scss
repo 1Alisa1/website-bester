@@ -1,19 +1,19 @@
-@use '/src/scss/abstracts/mixins' as *;
-@use '/src/scss/abstracts/variables' as *;
+@use "/src/scss/abstracts/mixins" as *;
+@use "/src/scss/abstracts/variables" as *;
 
 .intro {
   display: flex;
   justify-content: space-between;
   @include large {
-    @include wrapper(map-get($width, 'large'));
+    @include wrapper(map-get($width, "large"));
     margin-bottom: 200px;
   }
   @include medium {
-    @include wrapper(map-get($width, 'medium'));
+    @include wrapper(map-get($width, "medium"));
     margin-bottom: 150px;
   }
   @include small {
-    @include wrapper-small(map-get($padding, 'small'));
+    @include wrapper-small(map-get($padding, "small"));
     justify-content: center;
     margin-bottom: 100px;
   }
@@ -64,8 +64,7 @@
       display: none;
       @include small {
         display: block;
-        max-width: 472px;
-        min-width: 340px;
+        width: 340px;
         margin-bottom: 40px;
         align-self: center;
         img {
@@ -83,9 +82,20 @@
       background-color: #6c5ecc;
       color: #fdfcfc;
       font-size: 1.5rem;
+      -webkit-tap-highlight-color:rgba(0, 0, 0, 0);
+      @include large {
+        &:hover {
+          background-color: #4437a1;
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.16);
+        }
+      }
       @include medium {
         width: 235px;
         font-size: 1.25rem;
+        &:hover {
+          background-color: #4437a1;
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.16);
+        }
       }
       @include small {
         width: 100%;
@@ -93,10 +103,6 @@
         height: 45px;
         padding: 13px 130.5px;
         font-size: 1rem;
-      }
-      &:hover {
-        background-color: #4437a1;
-        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.16);
       }
       &:active {
         background-color: #40329a;
@@ -108,8 +114,9 @@
     width: 867px;
     height: 676px;
     @include medium {
-      width: 645px;
+      width: 675px;
       height: 504px;
+      padding-right: 30px;
     }
     @include small {
       display: none;
