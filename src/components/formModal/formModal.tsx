@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { useForm } from "react-hook-form";
 import InputPhone from "../inputPhone/inputPhone";
 import styles from "./formModal.module.scss";
@@ -21,9 +22,15 @@ const FormModal: React.FC<FormModalProps> = ({
     setValue,
   } = useForm({ mode: "onChange" });
 
+  const [showTel, setShowTel] = useState(true);
+
   const onButtonSubmit = (data: {}) => {
     console.log(data);
     reset();
+    setShowTel(false);
+    setTimeout(() => {
+      setShowTel(true);
+    }, 1);
   };
 
   return (
@@ -52,7 +59,7 @@ const FormModal: React.FC<FormModalProps> = ({
         <label>
           <span>*</span>
           Телефон
-          <InputPhone
+          {showTel && <InputPhone
             className={styles.inputTel}
             {...register("tel", {
               required: true,
@@ -61,7 +68,7 @@ const FormModal: React.FC<FormModalProps> = ({
             onValueChange={(newValue) => {
               setValue("tel", newValue, { shouldValidate: true });
             }}
-          />
+          />}
         </label>
         <label>
           Комментарий
