@@ -1,8 +1,8 @@
-import CardComment from '../cardComment/cardComment';
-import styles from './commentsSection.module.scss';
-import inst from '../../img/inst.svg';
-import Carousel from '../carousel/carousel';
-import { CarouselItem } from '../carouselItem/carouselItem';
+import CardComment from "../cardComment/cardComment";
+import styles from "./commentsSection.module.scss";
+import inst from "../../img/inst.svg";
+import Carousel from "../carousel/carousel";
+import { CarouselItem } from "../carouselItem/carouselItem";
 
 const CommentsSection: React.FC = () => {
   const comments = [
@@ -20,12 +20,12 @@ const CommentsSection: React.FC = () => {
       userName="@vadzim.strakh"
       content={
         <p>
-          Спасибо большое за вашу работу. Никогда не думал,{' '}
+          Спасибо большое за вашу работу. Никогда не думал,{" "}
           <br className={styles.small} /> что за такие деньги можно открыть
           бизнес. Всё очень красиво <br className={styles.large} /> и грамотно
           оформлено. <br className={styles.medium} /> Читая ваши курсы, сразу
-          понимаю, <br className={styles.medium} /> что работали профессионалы.{' '}
-          <br className={styles.medium} /> Спасибо{' '}
+          понимаю, <br className={styles.medium} /> что работали профессионалы.{" "}
+          <br className={styles.medium} /> Спасибо{" "}
           <br className={styles.small} /> за оперативность
         </p>
       }
@@ -35,11 +35,11 @@ const CommentsSection: React.FC = () => {
       content={
         <p>
           Огромное спасибо команде bestep.by за качественный продукт. Все чётко
-          соблюдённые условия <br className={styles.medium} />{' '}
+          соблюдённые условия <br className={styles.medium} />{" "}
           <br className={styles.small} /> и профессиональное отношение.
-          Однозначно обращусь <br className={styles.large} /> к ребятам{' '}
-          <br className={styles.medium} /> ещё раз, т.к. аналогов их работы{' '}
-          <br className={styles.medium} /> пока <br className={styles.small} />{' '}
+          Однозначно обращусь <br className={styles.large} /> к ребятам{" "}
+          <br className={styles.medium} /> ещё раз, т.к. аналогов их работы{" "}
+          <br className={styles.medium} /> пока <br className={styles.small} />{" "}
           не видел
         </p>
       }

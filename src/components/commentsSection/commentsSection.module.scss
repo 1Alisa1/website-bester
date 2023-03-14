@@ -75,26 +75,16 @@
     width: 348px;
     height: 55px;
     margin-left: auto;
-    border: none;
-    border-radius: 5px;
-    background-color: #6c5ecc;
-    color: #fdfcfc;
+    @include btn-normal-purple;
     font-size: 1.5rem;
-    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
     @include large {
-      &:hover {
-        background-color: #4437a1;
-        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.16);
-      }
+      @include btn-hover-purple;
     }
     
     @include medium {
       width: 235px;
       font-size: 1.25rem;
-      &:hover {
-        background-color: #4437a1;
-        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.16);
-      }
+      @include btn-hover-purple;
     }
     @include small {
       width: 94%;
@@ -102,10 +92,7 @@
       margin: 0 3%;
       font-size: 1rem;
     }
-    &:active {
-      background-color: #40329a;
-      box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.16);
-    }
+    @include btn-active-purple;
     img {
       width: 30px;
       height: 30px;

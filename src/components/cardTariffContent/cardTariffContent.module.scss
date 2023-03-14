@@ -62,34 +62,21 @@
       .btnBuy {
         height: 55px;
         margin-bottom: 15px;
-        border: none;
-        border-radius: 5px;
-        background-color: #6c5ecc;
-        color: #fdfcfc;
+        @include btn-normal-purple;
         font-size: 24px;
-        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
         @include large {
-          &:hover {
-            background-color: #4437a1;
-            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.16);
-          }
+          @include btn-hover-purple;
         }
         @include medium {
           margin-bottom: 10px;
           font-size: 20px;
-          &:hover {
-            background-color: #4437a1;
-            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.16);
-          }
+          @include btn-hover-purple;
         }
         @include small {
           height: 45px;
           font-size: 16px;
         }
-        &:active {
-          background-color: #40329a;
-          box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.16);
-        }
+        @include btn-active-purple;
       }
       .btnMore {
         height: 55px;
@@ -100,29 +87,17 @@
         font-size: 24px;
         -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
         @include large {
-          &:hover {
-            background-color: #2b2a2a;
-            color: #fdfcfc;
-            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.16);
-          }
+          @include btn-hover-black;
         }
         @include medium {
           font-size: 20px;
-          &:hover {
-            background-color: #2b2a2a;
-            color: #fdfcfc;
-            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.16);
-          }
+          @include btn-hover-black;
         }
         @include small {
           height: 45px;
           font-size: 16px;
         }
-        &:active {
-          background-color: #1f1e1e;
-          color: #fdfcfc;
-          box-shadow: inset 0px 4px 4px rgba(158, 158, 158, 0.16);
-        }
+        @include btn-active-black;
       }
     }
   }
