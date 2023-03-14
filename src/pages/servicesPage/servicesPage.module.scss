@@ -39,6 +39,7 @@
 .firstRow {
   display: flex;
   gap: 80px;
+  align-items: center;
   @include medium {
     gap: 66px;
   }
