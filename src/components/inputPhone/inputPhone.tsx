@@ -1,3 +1,4 @@
+import { forwardRef, useImperativeHandle } from "react";
 import {
   KeyboardEventHandler,
   useLayoutEffect,
@@ -11,11 +12,12 @@ interface InputPhoneProps {
   className?: string;
 }
 
-const InputPhone: React.FC<InputPhoneProps> = ({
+const InputPhone: React.FC<InputPhoneProps> = forwardRef(({
   onValueChange,
   className,
-}) => {
-  const placeholder = "+375\u00A0(**)\u00A0***\u00A0**\u00A0**";
+}, ref) => {
+  const prefix = "+375\u00A0"
+  const placeholder = "(**)\u00A0***\u00A0**\u00A0**";
   const accept = new RegExp("\\d", "g");
   const first = placeholder.indexOf("*");
   const prev: number[] = [];
@@ -30,6 +32,8 @@ const InputPhone: React.FC<InputPhoneProps> = ({
   const [value, setValue] = useState<string>(placeholder);
   const [selection, setSelection] = useState<[number, number]>();
   const inputEl = useRef<HTMLDivElement>(null);
+
+  useImperativeHandle(ref, () => inputEl.current)
 
   useLayoutEffect(() => {
     if (!inputEl.current) {
@@ -93,9 +97,9 @@ const InputPhone: React.FC<InputPhoneProps> = ({
     const newValue = clean(oldValue).join("");
 
     setValue(newValue);
-    
+
     if (onValueChange) {
-      onValueChange(newValue);
+      onValueChange(prefix + newValue);
     }
     setSelection([i, j]);
     setIsBackspace(false);
@@ -107,15 +111,16 @@ const InputPhone: React.FC<InputPhoneProps> = ({
 
   return (
     <div
+      ref={inputEl}
       contentEditable
       suppressContentEditableWarning
-      ref={inputEl}
+      data-prefix={prefix}
       className={styles.input + " " + className}
       onKeyDown={handleKeyDown}
       onInput={format}
       onFocus={format}
     />
   );
-};
+});
 
 export default InputPhone;

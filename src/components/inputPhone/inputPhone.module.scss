@@ -4,6 +4,11 @@
   display: flex;
   align-items: center;
   cursor: text;
+  caret-color : #000000;
+
+  &::before {
+    content: attr(data-prefix)
+  }
   
   & > span.spot {
     color: #C4C4C4;
